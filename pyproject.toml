@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "archonsai-gitlab-io"
+version = "0.1.0"
+description = "Gitlab Pages documentation using Material for MKDOCS"
+authors = ["Piatra <peter.kalt@piatra.com.au>"]
+license = "Commercial"
+readme = "README.md"
+packages = [{include = "archonsai"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+mkdocs = "^1.5.3"
+mkdocs-material = "^9.5.15"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

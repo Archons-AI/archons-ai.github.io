@@ -1,0 +1,114 @@
+site_name: ARCHONS.AI
+site_url: https://archons.ai
+theme:
+  include_search_page: false
+  search_index_only: true
+  custom_dir: overrides
+  features:
+    - announce.dismiss
+    - content.code.copy
+    - header.autohide
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.top
+    - navigation.sticky
+    - search.suggest
+    - toc.follow
+    # - toc.integrate
+  language: en
+  logo: assets/logo-bw.png
+  favicon: assets/favicon.png
+  icon:
+    repo: fontawesome/brands/git-alt
+  font:
+    text: Roboto
+  name: material
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      primary: orange
+      accent: orange
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: orange
+      accent: orange
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: orange
+      accent: orange
+      toggle:
+        icon: material/toggle-switch-off
+        name: Switch to system preference
+extra:
+  hero:
+    title: "Welcome to My Website"
+    headline: "Discover Amazing Content"
+    # description: "Explore a world of fascinating topics and inspiring ideas."
+    actions:
+      - text: "Prompts"
+        link: "/testing"
+        type: "primary"
+      - text: "Jailbreak"
+        link: "/jailbreak"
+        type: "secondary"
+  consent:
+    title: Cookie consent
+    description: >-
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+    actions:
+      - accept
+      - reject
+  social:
+    - icon: fontawesome/brands/gitlab
+      link: https://gitlab.com/archonsai
+      name: Archons.ai on GitLab
+copyright: MIT License. <a href="#__consent">Change cookie settings</a>
+repo_url: https://gitlab.com/archonsai/archons
+repo_name: archonsai/archons
+plugins:
+  - privacy
+  - search
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - toc:
+      permalink: false
+      title: On this page
+      toc_depth: 3
+nav:
+  - Home:
+      - Overview: "index.md"
+      - Ethics: "ethics.md"
+  - Testing:
+      - Prompts: "testing.md"
+      - Jailbreak: "jailbreak.md"
+  - Contribute: "community.md"
+  - License: "license.md"
+extra_css:
+  - stylesheets/extra.css
